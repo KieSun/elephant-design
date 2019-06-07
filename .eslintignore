@@ -1,3 +1,5 @@
 dist/
 rollup.config.js
 example/**/*.html
+jest.config.js
+commitlint.config.js
