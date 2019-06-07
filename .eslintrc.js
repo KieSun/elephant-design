@@ -1,6 +1,11 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['airbnb', 'prettier', 'plugin:jest/recommended'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'plugin:jest/recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
   parserOptions: {
     ecmaFeatures: {
       js: true,
@@ -18,6 +23,7 @@ module.exports = {
     es6: true
   },
   rules: {
+    '@typescript-eslint/explicit-function-return-type': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/prop-types': 0,
     'react/forbid-prop-types': 0,
