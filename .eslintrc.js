@@ -1,12 +1,16 @@
-module.exports = {
+const eslintrc = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
     'prettier',
-    'plugin:jest/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'prettier/@typescript-eslint',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended'
   ],
   parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
     ecmaFeatures: {
       js: true,
       tsx: true,
@@ -15,6 +19,7 @@ module.exports = {
     useJSXTextNode: true,
     project: './tsconfig.json'
   },
+  plugins: ['markdown', 'react', 'babel', 'jest', '@typescript-eslint'],
   env: {
     browser: true,
     node: true,
@@ -36,7 +41,7 @@ module.exports = {
       'error',
       {
         devDependencies: [
-          'site/**',
+          'example/**',
           'tests/**',
           'scripts/**',
           '**/*.test.js',
@@ -57,3 +62,5 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline']
   }
 }
+
+module.exports = eslintrc
