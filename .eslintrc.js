@@ -2,7 +2,6 @@ const eslintrc = {
   extends: [
     'airbnb',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
     'prettier',
     'prettier/@typescript-eslint',
     'plugin:jest/recommended'
@@ -24,6 +23,11 @@ const eslintrc = {
   parser: '@typescript-eslint/parser',
   plugins: ['markdown', 'react', 'babel', 'jest', '@typescript-eslint'],
   rules: {
+    'no-console': 0,
+    'func-names': 0,
+    'import/no-unresolved': 0,
+    'no-return-assign': 0,
+    'no-param-reassign': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
   }
 }
