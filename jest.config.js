@@ -8,8 +8,17 @@ module.exports = {
     '.(ts|tsx)': 'ts-jest'
   },
   testEnvironment: 'jsdom',
+  testRegex: `.*\\.test|spec\\.js$`,
+  testPathIgnorePatterns: ['/node_modules/', 'example'],
   moduleFileExtensions: ['ts', 'tsx', 'js'],
-  collectCoverageFrom: ['components/**/.{ts,tsx}'],
+  collectCoverageFrom: [
+    'components/**/*.{ts,tsx}',
+    '!components/index.tsx',
+    '!components/*/style/index.tsx',
+    '!components/style/index.tsx'
+  ],
   collectCoverage: true,
+  coverageReporters: ['html', 'lcov', 'text-summary'],
+  coverageDirectory: './test/coverage',
   transformIgnorePatterns
 }

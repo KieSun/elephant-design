@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - 9
-  - 8
-
+  - 11
+cache:
+  yarn: true
+os: linux
 branches:
   only:
     - master
+    - dev
+install:
+  - npm install -g codecov
+  - yarn install
+script:
+  - yarn lint && yarn test
+after_success:
+  - codecov

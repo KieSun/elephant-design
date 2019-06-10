@@ -20,7 +20,8 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "commit": "git add . && git cz"
+    "commit": "git add . && git cz",
+    "lint": "eslint ./components --ext .js,.ts,.tsx"
   },
   "dependencies": {
     "classnames": "^2.2.6",

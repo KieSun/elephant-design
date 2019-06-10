@@ -18,7 +18,8 @@ const eslintrc = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
-    }
+    },
+    warnOnUnsupportedTypeScriptVersion: false
   },
   parser: '@typescript-eslint/parser',
   plugins: ['markdown', 'react', 'babel', 'jest', '@typescript-eslint'],
