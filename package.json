@@ -1,10 +1,10 @@
 {
-  "name": "yck-design",
+  "name": "elephant-design",
   "version": "0.0.1",
   "description": "",
   "author": "KieSun",
   "license": "MIT",
-  "repository": "KieSun/yck-design",
+  "repository": "KieSun/elephant-design",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -34,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
+    "@types/classnames": "^2.2.8",
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",

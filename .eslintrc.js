@@ -24,6 +24,7 @@ const eslintrc = {
   plugins: ['markdown', 'react', 'babel', 'jest', '@typescript-eslint'],
   rules: {
     'no-console': 0,
+    'import/no-extraneous-dependencies': 0,
     'func-names': 0,
     'import/no-unresolved': 0,
     'no-return-assign': 0,
