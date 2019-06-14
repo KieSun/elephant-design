@@ -7,6 +7,7 @@ module.exports = {
   transform: {
     '.(ts|tsx)': 'ts-jest'
   },
+  setupFiles: ['./tests/setup.js'],
   testEnvironment: 'jsdom',
   testRegex: `.*\\.test|spec\\.js$`,
   testPathIgnorePatterns: ['/node_modules/', 'example'],
