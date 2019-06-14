@@ -491,10 +491,25 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/cheerio@*":
+  version "0.22.11"
+  resolved "https://registry.npm.taobao.org/@types/cheerio/download/@types/cheerio-0.22.11.tgz#61c0facf9636d14ba5f77fc65ed8913aa845d717"
+  integrity sha1-YcD6z5Y20Uul93/GXtiROqhF1xc=
+  dependencies:
+    "@types/node" "*"
+
 "@types/classnames@^2.2.8":
   version "2.2.8"
   resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.8.tgz#17139e1e1104203572caa4368f6796f6225b70b4"
   integrity sha1-FxOeHhEEIDVyyqQ2j2eW9iJbcLQ=
+
+"@types/enzyme@^3.9.3":
+  version "3.9.3"
+  resolved "https://registry.npm.taobao.org/@types/enzyme/download/@types/enzyme-3.9.3.tgz#d1029c0edd353d7b00f3924803eb88216460beed"
+  integrity sha1-0QKcDt01PXsA85JIA+uIIWRgvu0=
+  dependencies:
+    "@types/cheerio" "*"
+    "@types/react" "*"
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
