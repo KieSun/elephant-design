@@ -1,0 +1,44 @@
+@import '../style/var';
+
+.eleph-loading {
+  display: inline-flex;
+  align-items: center;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &__indicator {
+    border-radius: 100%;
+    margin: 2px;
+    border: 2px solid;
+    background: transparent !important;
+    display: inline-block;
+    animation: eleph-rotate 0.75s 0s linear infinite;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-size: @base-font-size;
+
+    &--vertical {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+}
+
+@keyframes eleph-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
