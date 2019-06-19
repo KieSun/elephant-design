@@ -18,6 +18,9 @@ module.exports = {
     '!components/*/style/index.tsx',
     '!components/style/index.tsx'
   ],
+  moduleNameMapper: {
+    '\\.(css|less)$': 'identity-obj-proxy'
+  },
   snapshotSerializers: ['enzyme-to-json/serializer'],
   collectCoverage: true,
   coverageReporters: ['html', 'lcov', 'text-summary'],

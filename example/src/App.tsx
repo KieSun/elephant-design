@@ -5,7 +5,7 @@ import { Loading } from '../../dist/index.es'
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Loading text="Loading" color="red" vertical size={20} />
+      <Loading text="Loading" indicatorColor="red" vertical size={20} />
     </div>
   )
 }

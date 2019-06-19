@@ -12,9 +12,11 @@ interface LoadingProps {
   indicator?: React.ReactElement<any>
 }
 
-const wrapper = bem('loading')
+const wrapperClass = bem('loading')
 
-const defaultIndicator = <span className={classNames(wrapper('indicator'))} />
+const defaultIndicator = (
+  <span className={classNames(wrapperClass('indicator'))} />
+)
 
 function renderIndicator(props: LoadingProps) {
   const { indicator, indicatorColor = '#1989FA', size = 26 } = props
@@ -34,10 +36,10 @@ function renderIndicator(props: LoadingProps) {
 const Loading = (props: LoadingProps) => {
   const { text, vertical } = props
   return (
-    <div className={classNames(wrapper({ vertical }))}>
+    <div className={classNames(wrapperClass({ vertical }))}>
       {renderIndicator(props)}
       {text ? (
-        <span className={classNames(wrapper('text', { vertical }))}>
+        <span className={classNames(wrapperClass('text', { vertical }))}>
           {text}
         </span>
       ) : null}

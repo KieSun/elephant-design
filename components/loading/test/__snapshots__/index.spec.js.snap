@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading should render custom indicator when it's set 1`] = `
+<div
+  class="eleph-loading"
+>
+  <div
+    class="custom-indicator"
+  />
+  <span
+    class="eleph-loading__text"
+  >
+    Loading
+  </span>
+</div>
+`;
