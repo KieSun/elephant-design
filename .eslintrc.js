@@ -30,7 +30,10 @@ const eslintrc = {
     'import/no-unresolved': 0,
     'no-return-assign': 0,
     'no-param-reassign': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }]
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.tsx', '.md'] }
+    ]
   }
 }
 
