@@ -18,6 +18,7 @@ module.exports = {
     '!components/*/style/index.tsx',
     '!components/style/index.tsx'
   ],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   collectCoverage: true,
   coverageReporters: ['html', 'lcov', 'text-summary'],
   coverageDirectory: './test/coverage',
