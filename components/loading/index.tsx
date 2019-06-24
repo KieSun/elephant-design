@@ -5,10 +5,10 @@ import './index.less'
 
 interface LoadingProps {
   size?: number
-  vertical?: Boolean
+  vertical?: boolean
   indicatorColor?: string
   text?: string
-  toast?: Boolean
+  toast?: boolean
   indicator?: React.ReactElement<any>
 }
 
