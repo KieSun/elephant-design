@@ -1,0 +1,61 @@
+@import '../style/var';
+@component-name: eleph-tag;
+
+.@{component-name} {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: @base-font-size;
+  line-height: normal;
+  border-radius: 0.2em;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  cursor: default;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &--round {
+    border-radius: 1em;
+  }
+
+  &--small {
+    font-size: @small-font-size;
+  }
+
+  &--medium {
+    font-size: @base-font-size;
+  }
+
+  &--large {
+    font-size: @large-font-size;
+  }
+}
+
+.gen-color (@color) {
+  border-color: @color;
+  color: @color;
+}
+@colors-names: pink, red, yellow, orange, cyan, green, blue, purple, magenta,
+  volcano, gold, lime;
+@text-colors: #cc69a7, #ef4a5f, #fcd849, #f8c071, #8bd1c8, #57e77b, #7bccec,
+  #b88bbe, #ef5585, #f48259, #f6dd6e, #afd066;
+@background-colors: white, white, white, white, white, white, white, white,
+  white, white, white, white;
+.gen-color-classes(@colors-names, @i: 1) when(@i =< length(@colors-names)) {
+  @name: extract(@colors-names, @i);
+  @color: extract(@text-colors, @i);
+  @background-color: extract(@background-colors, @i);
+  .@{component-name}.@{component-name}--@{name} {
+    .gen-color(@color);
+    background-color: @background-color;
+  }
+
+  .gen-color-classes(@colors-names, @i + 1);
+}
+.gen-color-classes(@colors-names);

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag render a large purple tag 1`] = `
+<div
+  class="eleph-tag eleph-tag--round eleph-tag--purple eleph-tag--large"
+  role="button"
+  tabindex="0"
+>
+  text
+</div>
+`;
