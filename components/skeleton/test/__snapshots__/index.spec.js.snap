@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton should render children when it's not loading: not-loading 1`] = `
+<div
+  class="skeleton-children"
+>
+  loading completed
+</div>
+`;
+
+exports[`Skeleton should render skeleton when it's loading: is-loading 1`] = `
+<section
+  class="eleph-skeleton eleph-skeleton--animation"
+>
+  <div
+    class="eleph-skeleton__aside"
+  >
+    <div
+      class="eleph-skeleton__avatar eleph-skeleton__avatar--circle"
+    />
+  </div>
+  <div
+    class="eleph-skeleton__content"
+  >
+    <h3
+      class="eleph-skeleton__title"
+    />
+    <div
+      class="eleph-skeleton__paragraph"
+    >
+      <div />
+      <div />
+      <div />
+    </div>
+  </div>
+</section>
+`;
