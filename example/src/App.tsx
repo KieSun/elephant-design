@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../dist/index.es.css'
-import { Loading } from '../../dist/index.es'
+import { Loading, Skeleton } from '../../dist/index.es'
 
 const App: React.FC = () => {
+  const [skeletonLoading, setSkeletonLoading] = useState(true)
+
+  useEffect(() => {
+    const timmer = setTimeout(() => {
+      setSkeletonLoading(() => false)
+    }, 3000)
+
+    return () => {
+      clearTimeout(timmer)
+    }
+  }, [])
+
   return (
     <div className="App">
       <Loading text="Loading" indicatorColor="red" vertical size={20} />
+      <Skeleton
+        paragraph={{ rows: 2 }}
+        loading={skeletonLoading}
+        avatar={false}
+        animation={false}
+      >
+        <div>加载完成</div>
+      </Skeleton>
     </div>
   )
 }
