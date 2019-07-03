@@ -59,10 +59,7 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
   )
 }
 
-const renderContent = ({
-  paragraph = true,
-  title = true
-}: Partial<SkeletonProps>) => {
+const renderContent = ({ paragraph, title = true }: Partial<SkeletonProps>) => {
   return (
     <div className={classNames(wrapperClass('content'))}>
       {title ? <h3 className={classNames(wrapperClass('title'))} /> : null}
@@ -72,8 +69,7 @@ const renderContent = ({
 }
 
 const Skeleton = (props: SkeletonProps) => {
-  const { avatar, title, paragraph, loading, animation = true } = props
-  console.log('TCL: Skeleton -> avatar', avatar)
+  const { avatar, title, paragraph, loading = true, animation = true } = props
 
   if (loading) {
     return (
