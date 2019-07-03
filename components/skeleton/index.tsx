@@ -43,16 +43,17 @@ const renderAside = ({ avatar = true }: Partial<SkeletonProps>) => {
 }
 
 const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
-  let rows: number
+  let length: number
   if (typeof paragraph === 'boolean') {
-    rows = paragraph ? 3 : 0
+    length = paragraph ? 3 : 0
   } else {
-    rows = paragraph.rows
+    const { rows } = paragraph
+    length = rows
   }
 
   return (
     <div className={classNames(wrapperClass('paragraph'))}>
-      {Array.from({ length: rows }, (_, index) => (
+      {Array.from({ length }, (_, index) => (
         <div key={index} />
       ))}
     </div>
@@ -62,7 +63,7 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
 const renderContent = ({ paragraph, title = true }: Partial<SkeletonProps>) => {
   return (
     <div className={classNames(wrapperClass('content'))}>
-      {title ? <h3 className={classNames(wrapperClass('title'))} /> : null}
+      {title ? <div className={classNames(wrapperClass('title'))} /> : null}
       {renderParagraph({ paragraph })}
     </div>
   )

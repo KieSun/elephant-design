@@ -22,7 +22,7 @@ exports[`Skeleton should render skeleton when it's loading: is-loading 1`] = `
   <div
     class="eleph-skeleton__content"
   >
-    <h3
+    <div
       class="eleph-skeleton__title"
     />
     <div
