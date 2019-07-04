@@ -31,13 +31,43 @@ describe('Skeleton', () => {
     expect(wrapper.find('.eleph-skeleton__paragraph > div').length).toBe(0)
     expect(wrapper.find('.skeleton-children').length).toBe(0)
 
-    const fourRowsWrapper = mount(
+    const customRowsWrapper = mount(
       <Skeleton paragraph={{ rows: 4 }} avatar={{ shape: 'square' }} />
     )
     expect(wrapper.find('.eleph-skeleton__avatar--circle').length).toBe(0)
     expect(
-      fourRowsWrapper.find('.eleph-skeleton__paragraph > div').length
+      customRowsWrapper.find('.eleph-skeleton__paragraph > div').length
     ).toBe(4)
+
+    const customLastRowWidthWrapper = mount(
+      <Skeleton paragraph={{ width: '200px' }} avatar={{ shape: 'square' }} />
+    )
+    const customRowStyle = customLastRowWidthWrapper
+      .find('.eleph-skeleton__paragraph > div')
+      .last()
+      .prop('style')
+    expect(customRowStyle.width).toBe('200px')
+
+    const customWidthWrapper = mount(
+      <Skeleton
+        paragraph={{ width: ['400px', undefined, '200px'] }}
+        title="100px"
+      />
+    )
+    const titleStyle = customWidthWrapper
+      .find('.eleph-skeleton__title')
+      .prop('style')
+    expect(titleStyle.width).toBe('100px')
+    const firstRowStyle = customWidthWrapper
+      .find('.eleph-skeleton__paragraph > div')
+      .first()
+      .prop('style')
+    const lastRowStyle = customWidthWrapper
+      .find('.eleph-skeleton__paragraph > div')
+      .last()
+      .prop('style')
+    expect(firstRowStyle.width).toBe('400px')
+    expect(lastRowStyle.width).toBe('200px')
 
     const showChildrenWrapper = mount(
       <Skeleton loading={false}>
