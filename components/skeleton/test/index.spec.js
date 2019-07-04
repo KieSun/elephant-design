@@ -34,23 +34,34 @@ describe('Skeleton', () => {
     const customRowsWrapper = mount(
       <Skeleton paragraph={{ rows: 4 }} avatar={{ shape: 'square' }} />
     )
-    expect(wrapper.find('.eleph-skeleton__avatar--circle').length).toBe(0)
+    expect(
+      customRowsWrapper.find('.eleph-skeleton__avatar--circle').length
+    ).toBe(0)
     expect(
       customRowsWrapper.find('.eleph-skeleton__paragraph > div').length
     ).toBe(4)
 
-    const customLastRowWidthWrapper = mount(
-      <Skeleton paragraph={{ width: '200px' }} avatar={{ shape: 'square' }} />
+    const customLastRowWidthWrapper1 = mount(
+      <Skeleton paragraph={{ width: '200px' }} />
     )
-    const customRowStyle = customLastRowWidthWrapper
+    const customRowStyle1 = customLastRowWidthWrapper1
       .find('.eleph-skeleton__paragraph > div')
       .last()
       .prop('style')
-    expect(customRowStyle.width).toBe('200px')
+    expect(customRowStyle1.width).toBe('200px')
+
+    const customLastRowWidthWrapper2 = mount(
+      <Skeleton paragraph={{ width: 200 }} />
+    )
+    const customRowStyle2 = customLastRowWidthWrapper2
+      .find('.eleph-skeleton__paragraph > div')
+      .last()
+      .prop('style')
+    expect(customRowStyle2.width).toBe('200px')
 
     const customWidthWrapper = mount(
       <Skeleton
-        paragraph={{ width: ['400px', undefined, '200px'] }}
+        paragraph={{ width: ['400px', undefined, 200] }}
         title="100px"
       />
     )

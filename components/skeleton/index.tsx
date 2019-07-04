@@ -30,6 +30,9 @@ const getAvatarClass = ({ avatar }: Partial<SkeletonProps>) => {
   return m
 }
 
+const formatWidth = (width: Width) =>
+  typeof width === 'number' ? `${width}px` : width
+
 const renderAside = ({ avatar = true }: Partial<SkeletonProps>) => {
   if (avatar) {
     return (
@@ -53,11 +56,11 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
       }
       if (Array.isArray(width)) {
         return {
-          width: width[index]
+          width: formatWidth(width[index])
         }
       }
       return {
-        width: index === length - 1 ? width : undefined
+        width: index === length - 1 ? formatWidth(width) : undefined
       }
     })
   }
