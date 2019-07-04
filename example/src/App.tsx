@@ -27,10 +27,7 @@ const App: React.FC = () => {
       >
         <div>加载完成</div>
       </Skeleton>
-      <Skeleton
-        paragraph={{ width: ['400px', undefined, '200px'] }}
-        title="100px"
-      />
+      <Skeleton paragraph={{ width: ['400px', undefined, 10] }} title="100px" />
     </div>
   )
 }

@@ -87,7 +87,7 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
 const renderTitle = ({ title = true }: Partial<SkeletonProps>) => {
   const titleStyle: React.CSSProperties = {}
   if (typeof title !== 'boolean') {
-    titleStyle.width = title
+    titleStyle.width = formatWidth(title)
   }
 
   return title ? (
