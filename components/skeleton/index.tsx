@@ -21,7 +21,7 @@ type AvatarModifier = 'circle'
 const wrapperClass = bem('skeleton')
 const DEFAULT_ROWS = 3
 
-const getAvatarClass = ({ avatar }: Partial<SkeletonProps>) => {
+const getAvatarClass = ({ avatar }: Pick<SkeletonProps, 'avatar'>) => {
   const m: AvatarModifier[] = []
   const isCircle = !avatar || avatar === true || avatar.shape !== 'square'
   if (isCircle) {
@@ -33,7 +33,7 @@ const getAvatarClass = ({ avatar }: Partial<SkeletonProps>) => {
 const formatWidth = (width: Width) =>
   typeof width === 'number' ? `${width}px` : width
 
-const renderAside = ({ avatar = true }: Partial<SkeletonProps>) => {
+const renderAside = ({ avatar = true }: Pick<SkeletonProps, 'avatar'>) => {
   if (avatar) {
     return (
       <div className={classNames(wrapperClass('aside'))}>
@@ -48,7 +48,9 @@ const renderAside = ({ avatar = true }: Partial<SkeletonProps>) => {
   return null
 }
 
-const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
+const renderParagraph = ({
+  paragraph = true
+}: Pick<SkeletonProps, 'paragraph'>) => {
   const genRowStyles = (length: number, width?: Width | Width[]) => {
     return Array.from<void, React.CSSProperties>({ length }, (_, index) => {
       if (width === undefined) {
@@ -84,7 +86,7 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
   )
 }
 
-const renderTitle = ({ title = true }: Partial<SkeletonProps>) => {
+const renderTitle = ({ title = true }: Pick<SkeletonProps, 'title'>) => {
   const titleStyle: React.CSSProperties = {}
   if (typeof title !== 'boolean') {
     titleStyle.width = formatWidth(title)
@@ -95,7 +97,10 @@ const renderTitle = ({ title = true }: Partial<SkeletonProps>) => {
   ) : null
 }
 
-const renderContent = ({ paragraph, title }: Partial<SkeletonProps>) => {
+const renderContent = ({
+  paragraph,
+  title
+}: Pick<SkeletonProps, 'paragraph' | 'title'>) => {
   return (
     <div className={classNames(wrapperClass('content'))}>
       {renderTitle({ title })}
