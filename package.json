@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest --config=jest.config.js --env=jsdom",
     "test:watch": "react-scripts-ts test --env=jsdom",
-    "build": "rm -rf dist; rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
