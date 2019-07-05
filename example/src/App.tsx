@@ -20,14 +20,18 @@ const App: React.FC = () => {
       <Loading text="Loading" indicatorColor="red" vertical size={20} />
       <Skeleton
         paragraph={{ rows: 2, width: ['40px', '20px'] }}
-        loading={skeletonLoading}
+        loading
         avatar={false}
         animation={true}
-        title={'299px'}
+        title={{ width: 300 }}
       >
         <div>加载完成</div>
       </Skeleton>
-      <Skeleton paragraph={{ width: ['400px', undefined, 10] }} title="100px" />
+      <Skeleton
+        avatar={{ size: 50 }}
+        paragraph={{ width: ['400px', undefined, 10] }}
+        title={{ width: 100 }}
+      />
     </div>
   )
 }

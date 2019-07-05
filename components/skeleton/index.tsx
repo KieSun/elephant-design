@@ -6,11 +6,18 @@ import './index.less'
 type Width = string | number
 interface SkeletonProps {
   animation?: boolean
-  avatar?: boolean | { shape: 'circle' | 'square' }
+  avatar?: boolean | AvatarObject
   loading?: boolean
   paragraph?: boolean | ParagraphObject
-  title?: boolean | Width
+  title?: boolean | TitleObject
   children?: React.ReactChildren
+}
+interface AvatarObject {
+  size?: Width
+  shape?: 'circle' | 'square'
+}
+interface TitleObject {
+  width?: Width
 }
 interface ParagraphObject {
   rows?: number
@@ -35,12 +42,18 @@ const formatWidth = (width: Width) =>
 
 const renderAside = ({ avatar = true }: Partial<SkeletonProps>) => {
   if (avatar) {
+    const avatarStyle: React.CSSProperties = {}
+    if (typeof avatar === 'object' && avatar.size) {
+      avatarStyle.width = formatWidth(avatar.size)
+      avatarStyle.height = formatWidth(avatar.size)
+    }
     return (
-      <div className={classNames(wrapperClass('aside'))}>
+      <div className={classNames(wrapperClass('aside'))} style={avatarStyle}>
         <div
           className={classNames([
             wrapperClass('avatar', getAvatarClass({ avatar }))
           ])}
+          style={avatarStyle}
         />
       </div>
     )
@@ -86,8 +99,8 @@ const renderParagraph = ({ paragraph = true }: Partial<SkeletonProps>) => {
 
 const renderTitle = ({ title = true }: Partial<SkeletonProps>) => {
   const titleStyle: React.CSSProperties = {}
-  if (typeof title !== 'boolean') {
-    titleStyle.width = formatWidth(title)
+  if (typeof title !== 'boolean' && title.width) {
+    titleStyle.width = formatWidth(title.width)
   }
 
   return title ? (

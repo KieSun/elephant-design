@@ -5,7 +5,6 @@ import Skeleton from '../index'
 describe('Skeleton', () => {
   it('the element when has not props', () => {
     const wrapper = mount(<Skeleton />)
-
     expect(wrapper.find('.eleph-skeleton').length).toBe(1)
     expect(wrapper.find('.eleph-skeleton__avatar').length).toBe(1)
     expect(wrapper.find('.eleph-skeleton__avatar--circle').length).toBe(1)
@@ -42,7 +41,11 @@ describe('Skeleton', () => {
     ).toBe(4)
 
     const customLastRowWidthWrapper1 = mount(
-      <Skeleton paragraph={{ width: '200px' }} title="100px" />
+      <Skeleton
+        paragraph={{ width: '200px' }}
+        title={{ width: '100px' }}
+        avatar={{ size: '50px' }}
+      />
     )
     const customRowStyle1 = customLastRowWidthWrapper1
       .find('.eleph-skeleton__paragraph > div')
@@ -53,9 +56,17 @@ describe('Skeleton', () => {
       .find('.eleph-skeleton__title')
       .prop('style')
     expect(titleStyle1.width).toBe('100px')
+    const avatarStyle1 = customLastRowWidthWrapper1
+      .find('.eleph-skeleton__avatar')
+      .prop('style')
+    expect(avatarStyle1.width).toBe('50px')
 
     const customLastRowWidthWrapper2 = mount(
-      <Skeleton title={100} paragraph={{ width: 200 }} />
+      <Skeleton
+        title={{ width: 100 }}
+        paragraph={{ width: 200 }}
+        avatar={{ size: 50 }}
+      />
     )
     const customRowStyle2 = customLastRowWidthWrapper2
       .find('.eleph-skeleton__paragraph > div')
@@ -66,6 +77,10 @@ describe('Skeleton', () => {
       .find('.eleph-skeleton__title')
       .prop('style')
     expect(titleStyle2.width).toBe('100px')
+    const avatarStyle2 = customLastRowWidthWrapper2
+      .find('.eleph-skeleton__avatar')
+      .prop('style')
+    expect(avatarStyle2.width).toBe('50px')
 
     const customWidthWrapper = mount(
       <Skeleton paragraph={{ width: ['400px', undefined, 200] }} />
