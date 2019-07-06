@@ -1,10 +1,8 @@
 @import '../style/var';
 
-@prefix-cls: eleph-skeleton;
-@gloomy-color: #f2f2f2;
-@light-color: #e6e6e6;
+@skeleton-prefix-cls: ~'@{eleph-prefix}-skeleton';
 
-.@{prefix-cls} {
+.@{skeleton-prefix-cls} {
   display: flex;
   width: 100%;
 
@@ -17,7 +15,7 @@
   &__avatar {
     width: 40px;
     height: 40px;
-    background-color: @gloomy-color;
+    background-color: @skeleton-background-color;
 
     &--circle {
       border-radius: 50%;
@@ -33,7 +31,7 @@
     height: 16px;
     width: 50%;
     margin: 12px 0 0;
-    background-color: @gloomy-color;
+    background-color: @skeleton-background-color;
   }
 
   &__paragraph {
@@ -42,7 +40,7 @@
     div {
       height: 16px;
       margin: 0;
-      background-color: @gloomy-color;
+      background-color: @skeleton-background-color;
     }
 
     div + div {
@@ -51,16 +49,16 @@
   }
 }
 
-.@{prefix-cls}.@{prefix-cls}--animation {
-  .@{prefix-cls}__avatar {
+.@{skeleton-prefix-cls}.@{skeleton-prefix-cls}--animation {
+  .@{skeleton-prefix-cls}__avatar {
     .skeleton-animation();
   }
 
-  .@{prefix-cls}__title {
+  .@{skeleton-prefix-cls}__title {
     .skeleton-animation();
   }
 
-  .@{prefix-cls}__paragraph {
+  .@{skeleton-prefix-cls}__paragraph {
     div {
       .skeleton-animation();
     }
@@ -68,7 +66,7 @@
 }
 
 .skeleton-animation() {
-  background: linear-gradient(90deg, @gloomy-color 25%, @light-color 37%, @gloomy-color 63%);
+  background: linear-gradient(90deg, @skeleton-background-color 25%, @light-color 37%, @skeleton-background-color 63%);
   background-size: 400% 100%;
   -webkit-animation: skeleton-loading 1.4s ease infinite;
   animation: skeleton-loading 1.4s ease infinite;
