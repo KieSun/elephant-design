@@ -15,6 +15,14 @@ describe('Loading', () => {
     expect(indicatorStyle.width).toBe('20px')
   })
 
+  it('should set the width props by number or string type', function() {
+    const wrapper = mount(<Loading size="20px" />)
+    const indicatorStyle = wrapper
+      .find('.eleph-loading__indicator')
+      .prop('style')
+    expect(indicatorStyle.width).toBe('20px')
+  })
+
   it("should render custom indicator when it's set", () => {
     const customIndicator = <div className="custom-indicator" />
     const wrapper = render(
