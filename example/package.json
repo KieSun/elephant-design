@@ -129,5 +129,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^4.3.4"
   }
 }
