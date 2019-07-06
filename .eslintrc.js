@@ -33,7 +33,9 @@ const eslintrc = {
     'react/jsx-filename-extension': [
       1,
       { extensions: ['.js', '.jsx', '.tsx', '.md'] }
-    ]
+    ],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error'
   }
 }
 
