@@ -1,9 +1,10 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { bem } from '../utils'
+import { Width } from '../utils/types'
+import { formatWidth } from '../utils/style'
 import './index.less'
 
-type Width = string | number
 interface SkeletonProps {
   animation?: boolean
   avatar?: boolean | AvatarObject
@@ -36,9 +37,6 @@ const getAvatarClass = ({ avatar }: Pick<SkeletonProps, 'avatar'>) => {
   }
   return m
 }
-
-const formatWidth = (width: Width) =>
-  typeof width === 'number' ? `${width}px` : width
 
 const renderAside = ({ avatar = true }: Pick<SkeletonProps, 'avatar'>) => {
   if (avatar) {
