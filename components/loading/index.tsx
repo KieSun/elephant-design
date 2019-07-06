@@ -1,10 +1,12 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { bem } from '../utils'
+import { Width } from '../utils/types'
+import { formatWidth } from '../utils/style'
 import './index.less'
 
 interface LoadingProps {
-  size?: number
+  size?: Width
   vertical?: boolean
   indicatorColor?: string
   text?: string
@@ -27,8 +29,8 @@ function renderIndicator(props: LoadingProps) {
     style: {
       borderColor: indicatorColor,
       borderBottomColor: 'transparent',
-      width: `${size}px`,
-      height: `${size}px`
+      width: formatWidth(size),
+      height: formatWidth(size)
     }
   })
 }
