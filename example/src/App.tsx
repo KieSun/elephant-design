@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { HashRouter, Switch, Link } from 'react-router-dom'
+import Router from './router'
 import '../../dist/index.es.css'
-import { Loading, Skeleton } from '../../dist/index.es'
+import './index.css'
 
-const App: React.FC = () => {
-  const [skeletonLoading, setSkeletonLoading] = useState(true)
+const BasicRoute = () => (
+  <HashRouter>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/loading">Loading</Link>
+        </li>
+        <li>
+          <Link to="/skeleton">Skeleton</Link>
+        </li>
+      </ul>
+    </nav>
+    <Switch>
+      <Router />
+    </Switch>
+  </HashRouter>
+)
 
-  useEffect(() => {
-    const timmer = setTimeout(() => {
-      setSkeletonLoading(() => false)
-    }, 3000)
-
-    return () => {
-      clearTimeout(timmer)
-    }
-  }, [])
-
-  return (
-    <div className="App">
-      <Loading text="Loading" indicatorColor="red" vertical size={20} />
-      <Skeleton
-        paragraph={{ rows: 2, width: ['40px', '20px'] }}
-        loading
-        avatar={false}
-        animation={true}
-        title={{ width: 300 }}
-      >
-        <div>加载完成</div>
-      </Skeleton>
-      <Skeleton
-        avatar={{ size: 50 }}
-        paragraph={{ width: ['400px', undefined, 10] }}
-        title={{ width: 100 }}
-      />
-    </div>
-  )
-}
-
-export default App
+export default BasicRoute
