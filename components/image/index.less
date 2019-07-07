@@ -1,0 +1,25 @@
+@import '../style/var';
+.sizeMixin() {
+  width: 100%;
+  height: 100%;
+}
+.eleph-image {
+  position: relative;
+  &__image {
+    .sizeMixin();
+  }
+  &__placeholder {
+    .sizeMixin();
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__error,
+  &__loading {
+    font-size: @base-font-size;
+  }
+}
