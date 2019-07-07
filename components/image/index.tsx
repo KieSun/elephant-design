@@ -22,9 +22,8 @@ interface ImageProps {
   onLoadError?: () => void
 }
 
-/**
- * TODO:enum eslint检测错误 LOADING' is defined but never used,只能替换成const 代替enum
- */
+//TODO:enum eslint检测错误 LOADING' is defined but never used,只能替换成const 代替enum
+//图片的状态
 const STATUS = {
   LOADING: 0,
   SUCCESS: 1,
@@ -69,9 +68,10 @@ const Image = (props: ImageProps) => {
     status: STATUS.LOADING,
     currentCount: 0
   })
-
+  //图片的dom对象
   const imgRef = useRef<HTMLImageElement>(null)
   const { status } = state
+  //加载成功
   const onSuccessHandler = () => {
     setState({
       ...state,
@@ -82,14 +82,16 @@ const Image = (props: ImageProps) => {
       onLoadSuccess()
     }
   }
+  //加载失败
   const onErrorHandler = () => {
     const { currentCount } = state
     const { current } = imgRef
-    const isLastAttempt = currentCount === attempt - 1
+    const isLastAttempt = currentCount === attempt - 1 //尝试若干次直到等于最大尝试次数
     if (src && !isLastAttempt) {
       current!.src = src
       state.currentCount += 1
     } else {
+      //TODO: 等公共utils有记录之前状态的hooks后修改写法
       state.status = STATUS.ERROR
       // 触发一次更新
       setState({
