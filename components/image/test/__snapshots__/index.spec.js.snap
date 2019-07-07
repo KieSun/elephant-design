@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image not set onLoadSuccess , onLoadError,onClick 1`] = `
+<div
+  className="eleph-image"
+  style={
+    Object {
+      "height": "100px",
+      "width": "100px",
+    }
+  }
+>
+  <div
+    className="eleph-image__placeholder"
+  >
+    <p
+      className="eleph-image__error "
+    >
+      加载失败
+    </p>
+  </div>
+</div>
+`;
