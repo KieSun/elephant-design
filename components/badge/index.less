@@ -1,0 +1,28 @@
+@import '../style/var';
+
+@badge-prefix-cls: ~'@{eleph-prefix}-badge';
+
+.@{badge-prefix-cls} {
+  position: relative;
+  &__text {
+    height: 18px;
+    line-height: 18px;
+    min-width: 9px;
+    border-radius: 12px;
+    padding: 0 5px;
+    font-size: @base-font-size;
+    color: #fff;
+    background: #ff5b05;
+  }
+  &__dot{
+    position: absolute;
+    transform: translateX(-50%);
+    transform-origin: 0 center;
+    top: -4px;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #ff5b05;
+    z-index: 10;
+  }
+}
