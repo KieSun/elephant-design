@@ -14,6 +14,9 @@ const BasicRoute = () => (
         <li>
           <Link to="/skeleton">Skeleton</Link>
         </li>
+        <li>
+          <Link to="/icon">Icon</Link>
+        </li>
       </ul>
     </nav>
     <Switch>
