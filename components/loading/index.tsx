@@ -2,7 +2,7 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { bem } from '../utils'
 import { Width } from '../utils/types'
-import { formatWidth } from '../utils/style'
+import { formatSize } from '../utils/style'
 import './index.less'
 
 interface LoadingProps {
@@ -29,8 +29,8 @@ function renderIndicator(props: LoadingProps) {
     style: {
       borderColor: indicatorColor,
       borderBottomColor: 'transparent',
-      width: formatWidth(size),
-      height: formatWidth(size)
+      width: formatSize(size),
+      height: formatSize(size)
     }
   })
 }

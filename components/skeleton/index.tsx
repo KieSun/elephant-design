@@ -2,7 +2,7 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { bem } from '../utils'
 import { Width } from '../utils/types'
-import { formatWidth } from '../utils/style'
+import { formatSize } from '../utils/style'
 import './index.less'
 
 interface SkeletonProps {
@@ -42,8 +42,8 @@ const renderAside = ({ avatar = true }: Pick<SkeletonProps, 'avatar'>) => {
   if (avatar) {
     const avatarStyle: React.CSSProperties = {}
     if (typeof avatar === 'object' && avatar.size) {
-      avatarStyle.width = formatWidth(avatar.size)
-      avatarStyle.height = formatWidth(avatar.size)
+      avatarStyle.width = formatSize(avatar.size)
+      avatarStyle.height = formatSize(avatar.size)
     }
     return (
       <div className={classNames(wrapperClass('aside'))} style={avatarStyle}>
@@ -69,11 +69,11 @@ const renderParagraph = ({
       }
       if (Array.isArray(width)) {
         return {
-          width: formatWidth(width[index])
+          width: formatSize(width[index])
         }
       }
       return {
-        width: index === length - 1 ? formatWidth(width) : undefined
+        width: index === length - 1 ? formatSize(width) : undefined
       }
     })
   }
@@ -100,7 +100,7 @@ const renderParagraph = ({
 const renderTitle = ({ title = true }: Pick<SkeletonProps, 'title'>) => {
   const titleStyle: React.CSSProperties = {}
   if (typeof title !== 'boolean' && title.width) {
-    titleStyle.width = formatWidth(title.width)
+    titleStyle.width = formatSize(title.width)
   }
 
   return title ? (
