@@ -26,7 +26,10 @@ export const useImgObserver = (args: ImgObserver) => {
         return
       }
       ;(target as HTMLImageElement).src = src
-      target.addEventListener('load', onSuccessHandler)
+      target.addEventListener('load', () => {
+        onSuccessHandler()
+        io.disconnect()
+      })
       target.addEventListener('error', onErrorHandler)
     },
     { root: scrollBox }
