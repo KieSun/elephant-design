@@ -1,0 +1,36 @@
+@import '../style/var';
+
+.eleph-progress {
+  position: relative;
+  height: @progress-height;
+  border-radius: @progress-height;
+  background: @progress-background-color;
+  &__percent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    transition: all @progress-transition-duration linear;
+    height: 100%;
+    border-radius: inherit;
+    background-color: @progress-percent-color;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    box-sizing: border-box;
+    min-width: 2em;
+    padding: @progress-text-padding;
+    font-size: @progress-text-font-size;
+    line-height: @progress-text-line-height;
+    text-align: center;
+    word-break: keep-all;
+    background-color: @progress-percent-color;
+    color: @white;
+    border-radius: 1em;
+    transform: translate(100%, -50%);
+  }
+}
+
+
