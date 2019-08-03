@@ -24,7 +24,7 @@ const UpArrow = (props: Props) => {
     iconStyle.color = color
   }
   if (style) {
-    iconStyle = style
+    iconStyle = Object.assign(iconStyle, style)
   }
   return (
     <svg
