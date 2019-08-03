@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check affect the element when set props 1`] = `
+<Wrapper>
+  <Check
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M362.6 192.9L345 174.8c-.7-.8-1.8-1.2-2.8-1.2-1.1 0-2.1.4-2.8 1.2l-122 122.9-44.4-44.4c-.8-.8-1.8-1.2-2.8-1.2-1 0-2 .4-2.8 1.2l-17.8 17.8c-1.6 1.6-1.6 4.1 0 5.7l56 56c3.6 3.6 8 5.7 11.7 5.7 5.3 0 9.9-3.9 11.6-5.5h.1l133.7-134.4c1.4-1.7 1.4-4.2-.1-5.7z"
+      />
+    </svg>
+  </Check>
+</Wrapper>
+`;
+
+exports[`CheckCircle affect the element when set props 1`] = `
+<Wrapper>
+  <CheckCircle
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z"
+      />
+    </svg>
+  </CheckCircle>
+</Wrapper>
+`;
+
+exports[`CheckCircleOutline affect the element when set props 1`] = `
+<Wrapper>
+  <CheckCircleOutline
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M362.6 192.9L345 174.8c-.7-.8-1.8-1.2-2.8-1.2-1.1 0-2.1.4-2.8 1.2l-122 122.9-44.4-44.4c-.8-.8-1.8-1.2-2.8-1.2-1 0-2 .4-2.8 1.2l-17.8 17.8c-1.6 1.6-1.6 4.1 0 5.7l56 56c3.6 3.6 8 5.7 11.7 5.7 5.3 0 9.9-3.9 11.6-5.5h.1l133.7-134.4c1.4-1.7 1.4-4.2-.1-5.7z"
+      />
+      <path
+        d="M256 76c48.1 0 93.3 18.7 127.3 52.7S436 207.9 436 256s-18.7 93.3-52.7 127.3S304.1 436 256 436c-48.1 0-93.3-18.7-127.3-52.7S76 304.1 76 256s18.7-93.3 52.7-127.3S207.9 76 256 76m0-28C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"
+      />
+    </svg>
+  </CheckCircleOutline>
+</Wrapper>
+`;
+
+exports[`Close affect the element when set props 1`] = `
+<Wrapper>
+  <Close
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z"
+      />
+    </svg>
+  </Close>
+</Wrapper>
+`;
+
+exports[`CloseCircle affect the element when set props 1`] = `
+<Wrapper>
+  <CloseCircle
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm52.7 283.3L256 278.6l-52.7 52.7c-6.2 6.2-16.4 6.2-22.6 0-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3l52.7-52.7-52.7-52.7c-3.1-3.1-4.7-7.2-4.7-11.3 0-4.1 1.6-8.2 4.7-11.3 6.2-6.2 16.4-6.2 22.6 0l52.7 52.7 52.7-52.7c6.2-6.2 16.4-6.2 22.6 0 6.2 6.2 6.2 16.4 0 22.6L278.6 256l52.7 52.7c6.2 6.2 6.2 16.4 0 22.6-6.2 6.3-16.4 6.3-22.6 0z"
+      />
+    </svg>
+  </CloseCircle>
+</Wrapper>
+`;
+
+exports[`CloseCircleOutline affect the element when set props 1`] = `
+<Wrapper>
+  <CloseCircleOutline
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M331.3 308.7L278.6 256l52.7-52.7c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-52.7-52.7c-6.2-6.2-15.6-7.1-22.6 0-7.1 7.1-6 16.6 0 22.6l52.7 52.7-52.7 52.7c-6.7 6.7-6.4 16.3 0 22.6 6.4 6.4 16.4 6.2 22.6 0l52.7-52.7 52.7 52.7c6.2 6.2 16.4 6.2 22.6 0 6.3-6.2 6.3-16.4 0-22.6z"
+      />
+      <path
+        d="M256 76c48.1 0 93.3 18.7 127.3 52.7S436 207.9 436 256s-18.7 93.3-52.7 127.3S304.1 436 256 436c-48.1 0-93.3-18.7-127.3-52.7S76 304.1 76 256s18.7-93.3 52.7-127.3S207.9 76 256 76m0-28C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z"
+      />
+    </svg>
+  </CloseCircleOutline>
+</Wrapper>
+`;
+
+exports[`DownArrow affect the element when set props 1`] = `
+<Wrapper>
+  <DownArrow
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+      />
+    </svg>
+  </DownArrow>
+</Wrapper>
+`;
+
+exports[`LeftArrow affect the element when set props 1`] = `
+<Wrapper>
+  <LeftArrow
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+      />
+    </svg>
+  </LeftArrow>
+</Wrapper>
+`;
+
+exports[`More affect the element when set props 1`] = `
+<Wrapper>
+  <More
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M255.8 218c-21 0-38 17-38 38s17 38 38 38 38-17 38-38-17-38-38-38zM102 218c-21 0-38 17-38 38s17 38 38 38 38-17 38-38-17-38-38-38zm308 0c-21 0-38 17-38 38s17 38 38 38 38-17 38-38-17-38-38-38z"
+      />
+    </svg>
+  </More>
+</Wrapper>
+`;
+
+exports[`RightArrow affect the element when set props 1`] = `
+<Wrapper>
+  <RightArrow
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"
+      />
+    </svg>
+  </RightArrow>
+</Wrapper>
+`;
+
+exports[`UpArrow affect the element when set props 1`] = `
+<Wrapper>
+  <UpArrow
+    color="red"
+    onClick={[Function]}
+    size={20}
+    style={
+      Object {
+        "margin": "10px",
+      }
+    }
+  >
+    <svg
+      className="eleph-icon"
+      fill="currentColor"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "height": "20px",
+          "margin": "10px",
+          "width": "20px",
+        }
+      }
+      viewBox="0 0 512 512"
+    >
+      <path
+        d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"
+      />
+    </svg>
+  </UpArrow>
+</Wrapper>
+`;
