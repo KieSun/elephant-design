@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export { default as Loading } from './loading/index'
 export { default as Skeleton } from './skeleton/index'
+export { default as Slider } from './slider/index'
 export { default as LeftArrow } from './icon/leftArrow'
 export { default as UpArrow } from './icon/upArrow'
 export { default as RightArrow } from './icon/rightArrow'
