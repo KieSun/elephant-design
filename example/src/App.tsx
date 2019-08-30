@@ -4,19 +4,17 @@ import Router from './router'
 import '../../dist/index.es.css'
 import './index.css'
 
+const routers = ['loading', 'skeleton', 'icon', 'slider']
+
 const BasicRoute = () => (
   <HashRouter>
     <nav>
       <ul>
-        <li>
-          <Link to="/loading">Loading</Link>
-        </li>
-        <li>
-          <Link to="/skeleton">Skeleton</Link>
-        </li>
-        <li>
-          <Link to="/icon">Icon</Link>
-        </li>
+        {routers.map(item => (
+          <li key={item}>
+            <Link to={`/${item}`}>{item}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
     <Switch>
