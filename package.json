@@ -28,9 +28,8 @@
     "normalize.css": "^8.0.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
