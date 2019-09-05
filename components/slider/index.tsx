@@ -7,7 +7,12 @@ interface SliderProps {
   value: number
   min: number
   max: number
+  step: number
   vertical: boolean
+  disabled?: boolean
+  dragStart?: () => void
+  dragEnd?: () => void
+  onChange: (value: number) => void
 }
 
 interface TouchData {
@@ -22,16 +27,28 @@ const wrapperClass = bem('slider')
 
 type touchEvent = React.TouchEvent<HTMLDivElement>
 
-function limitNumber(number: number, min: number, max: number) {
-  return Math.min(Math.max(number, min), max)
-}
+const Slider = ({
+  value = 0,
+  min = 0,
+  max = 100,
+  step = 1,
+  vertical,
+  dragEnd,
+  dragStart,
+  onChange,
+  disabled = false
+}: SliderProps) => {
+  function limitNumber(number: number) {
+    return Math.round(Math.min(Math.max(number, min), max) / step) * step
+  }
 
-const Slider = ({ value = 0, min = 0, max = 100, vertical }: SliderProps) => {
   const [touchState, setTouchState] = React.useState({} as TouchData)
   const bar = React.useRef<HTMLDivElement>(null)
-  const [diffState, setDiffState] = React.useState(0)
+  const [diffState, setDiffState] = React.useState(limitNumber(value))
 
   function handleTouchStart(e: touchEvent) {
+    if (disabled) return
+    if (dragStart) dragStart()
     const touch = e.touches[0]
     setTouchState({
       startX: touch.clientX,
@@ -41,6 +58,7 @@ const Slider = ({ value = 0, min = 0, max = 100, vertical }: SliderProps) => {
   }
 
   function handleTouchMove(e: touchEvent) {
+    if (disabled) return
     if (bar && bar.current) {
       const rect = bar.current.getBoundingClientRect()
       const { width } = rect
@@ -48,9 +66,10 @@ const Slider = ({ value = 0, min = 0, max = 100, vertical }: SliderProps) => {
       const touch = e.touches[0]
       const offsetX = touch.clientX - startX
       const offsetY = touch.clientY - startY
-      let diff = offsetX / width
-      diff = startValue + diff
-      setDiffState(limitNumber(diff, 0, 1))
+      const diff = (offsetX / width) * (max - min) + startValue
+      const val = limitNumber(diff)
+      if (onChange) onChange(val)
+      setDiffState(val)
       setTouchState({
         ...touchState,
         offsetX,
@@ -59,15 +78,19 @@ const Slider = ({ value = 0, min = 0, max = 100, vertical }: SliderProps) => {
     }
   }
 
-  function handleTouchEnd(e: touchEvent) {
-    console.log(touchState, e)
+  function handleTouchEnd() {
+    if (disabled) return
+    if (dragEnd) dragEnd()
   }
 
   return (
-    <div className={classNames(wrapperClass())} ref={bar}>
+    <div
+      className={classNames(wrapperClass('', disabled ? 'disabled' : ''))}
+      ref={bar}
+    >
       <div
         className={classNames(wrapperClass('bar'))}
-        style={{ width: `${diffState * 100}%` }}
+        style={{ width: `${((diffState - min) / (max - min)) * 100}%` }}
       >
         <div
           className={classNames(wrapperClass('button-wrapper'))}
